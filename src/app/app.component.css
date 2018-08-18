@@ -1,0 +1,43 @@
+.displayNone{
+    display: none;
+}
+.marginTop{
+    margin-top:10px;
+}
+.width100{
+    width:100%;
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.viewMore{
+    cursor: pointer;
+    color: #0f0fc7;
+    margin-top: 5px;
+}
+.pageHeading{
+    text-align: center;
+}
+.acmeMainContainer{
+    border-top: 1px solid rgb(221, 219, 219);
+    padding-top: 10px;
+}
+.acmeMainContainer .acmeHeading{
+    
+    font-weight: bold;    
+}
+.acmeMainContainer .acmeChildContainer{
+    margin-left: 1px;
+    border-left: 1px solid rgb(221, 219, 219);
+    border-bottom: 1px solid rgb(221, 219, 219);
+    padding: 10px;
+}
+.acmeMainContainer .acmeChildContainer .label{
+    font-weight: bold;
+}
+.acmeMainContainer .acmeChildContainer .acmeChildHeading{
+    color: #0f0fc7;
+}

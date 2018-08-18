@@ -1,0 +1,39 @@
+<div>
+  <h1 class="pageHeading">Credit Balances</h1>
+  <div class="acmeMainContainer" *ngFor="let acme of balancesData">
+    <span class="acmeHeading">{{acme.id}} - {{acme.name}}</span>
+    <div class="acmeChildContainer" *ngFor="let acmeChild of acme.child">
+      <div class="">
+        <span class="acmeChildHeading">{{acmeChild.name}} {{acmeChild.id}}</span>
+        <span class="floatRight">{{acmeChild.type}}</span>
+      </div>
+      <div class="">
+          <span class="label">Available Balance</span>
+          <span class="floatRight">{{acmeChild.availableBalance | currency:'USD':'code'}}</span>
+      </div>
+      <div class="">
+          <div [class]="acmeChild.showDetails?'details':'details displayNone'">
+              <div class="marginTop">
+                  <span class="label">Available Amount</span>
+                  <span class="floatRight">{{acmeChild.availableAmt | currency:'USD':'code'}}</span>
+              </div>
+              <div>
+                  <span class="label">Outstanding Principle Amount</span>
+                  <span class="floatRight">{{acmeChild.outstandingPrincipalAmt | currency:'USD':'code'}}</span>
+              </div>
+              <div class="marginTop">
+                  <span class="label">Rate</span>
+                  <span class="floatRight">{{acmeChild.rate | number:'1.6-6'}}</span>
+              </div>
+              <div>
+                  <span class="label">Maturiti Date</span>
+                  <span class="floatRight">{{acmeChild.maturitiDate | date:"MM/dd/yyyy"}}</span>
+              </div>
+          </div>
+          <div class="viewMore" (click)="viewLessHandler(acmeChild)">
+              {{acmeChild.showDetails?'view Less':'view More'}}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
